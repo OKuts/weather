@@ -1,0 +1,43 @@
+@import './reset';
+@import './base';
+@import './palette';
+@import './fonts';
+
+@import './filter.scss';
+@import './head.scss';
+@import './current-weather.scss';
+@import './forecast.scss';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('./assets/bg.png');
+    background-size: cover;
+    height: 100vh;
+}
+
+main {
+    width: 910px;
+    margin: 0 auto;
+    & h1 {
+        margin: 10px auto auto 10px;
+        font-size: 4rem;
+        color: #ccc;
+    }
+}
+
+@media screen and (max-width: 910px) {
+    main {
+        width: 100%
+    }
+}
+
+@media screen and (max-width: 768px) {
+    main {
+         width: calc(100% - 40px);
+    }
+}
